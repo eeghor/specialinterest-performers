@@ -20,7 +20,16 @@ class SpiPerformers:
 					 'lgbt_comedians': ['LGBT_comedians'], 
 					 'ventriloquists': ['Ventriloquists'],
 					 'psychics': [f'{nat.capitalize()}_psychics' for nat in 'american australian british irish'.split()],
-					 'stunt_performers': [f'{nat.capitalize()}_stunt_performers' for nat in 'american australian british'.split()]}
+					 'stunt_performers': [f'{nat.capitalize()}_stunt_performers' 
+					 		for nat in 'american australian british'.split()],
+					 'dog_trainers': ['Dog_trainers'],
+					 'game_show_hosts': [f'{nat.capitalize()}_game_show_hosts' 
+					 		for nat in 'american australian british'.split()],
+					 'talk_show_hosts': ['American_television_talk_show_hosts',
+					 'American_television_talk_show_hosts&pagefrom=Lucia%2C+Ray%0ARay+Lucia#mw-pages',
+					 'Australian_television_talk_show_hosts'],
+					 'technology_company_founders': ['American_technology_company_founders',
+					 'American_technology_company_founders&pagefrom=LeBow%2C+Bennett+S.%0ABennett+S.+LeBow#mw-pages']}
 
 		self.URLS = [f'{self.WIKICAT_URL}{_}' for _ in self.CATS[self.PERFS]]
 
@@ -67,6 +76,6 @@ class SpiPerformers:
 
 if __name__ == '__main__':
 
-	sp = (SpiPerformers('stunt_performers')
+	sp = (SpiPerformers('technology_company_founders')
 						.get()
 						.save())
