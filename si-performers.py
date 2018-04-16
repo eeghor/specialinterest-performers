@@ -29,7 +29,33 @@ class SpiPerformers:
 					 'American_television_talk_show_hosts&pagefrom=Lucia%2C+Ray%0ARay+Lucia#mw-pages',
 					 'Australian_television_talk_show_hosts'],
 					 'technology_company_founders': ['American_technology_company_founders',
-					 'American_technology_company_founders&pagefrom=LeBow%2C+Bennett+S.%0ABennett+S.+LeBow#mw-pages']}
+					 'American_technology_company_founders&pagefrom=LeBow%2C+Bennett+S.%0ABennett+S.+LeBow#mw-pages'],
+					 'cookbook_writers': ['Cookbook_writers',
+					 					  'American_cookbook_writers',
+					 					  'Women_cookbook_writers',
+					 					  'Canadian_cookbook_writers',
+					 					  'Chinese_cookbook_writers'],
+					 'science_writers': ['English_science_writers',
+					 					 'American_science_writers',
+					 					 'British_science_writers',
+					 					 'Australian_science_writers',
+					 					 'Chinese_science_writers',
+					 					 'French_science_writers'],
+					 'environmentalists': ['Canadian_environmentalists',
+					 					   'Indian_environmentalists',
+					 					   'British_environmentalists',
+					 					   'American_environmentalists',
+					 					   'Australian_environmentalists',
+					 					   'Chinese_environmentalists',
+					 					   'New_Zealand_environmentalists',
+					 					   'Norwegian_environmentalists',
+					 					   'Dutch_environmentalists'],
+					'swimmers': ['Australian_male_swimmers',
+								 'Australian_female_swimmers'],
+					'boxers': ['Australian_male_boxers', 
+								'Australian_women_boxers'],
+					'rugby_union_players': ['Australian_female_rugby_union_players',
+					'Australian_rugby_union_players']}
 
 		self.URLS = [f'{self.WIKICAT_URL}{_}' for _ in self.CATS[self.PERFS]]
 
@@ -76,6 +102,6 @@ class SpiPerformers:
 
 if __name__ == '__main__':
 
-	sp = (SpiPerformers('technology_company_founders')
+	sp = (SpiPerformers('rugby_union_player')
 						.get()
 						.save())
